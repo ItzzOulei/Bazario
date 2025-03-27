@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Scrollen initial blockieren */
+    height: 100%;
+}
+
+section.Logo-Section {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background: #CD519D;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo-Section {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #CD519D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redirect-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    animation: floatText 2s infinite alternate ease-in-out;
+    font-family: "Roboto", sans-serif;
+    z-index: 100;
+}
+.redirect-text h1 {
+    font-size: 10rem;
+    margin: 0;
+}
+
+
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+section.categories-banner { /* Ersetzt .next-section */
+    height: 100vh;
+    background: #4B2E6D; /* Kann an dein Design angepasst werden */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo-Section .circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: moveAround 5s infinite alternate ease-in-out;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+.Logo-Section .circle1 {
+    width: 60%;
+    height: 80%;
+    background-color: #4B2E6D;
+    top: 20%;
+    z-index: 1;
+    animation-duration: 6s;
+}
+
+.Logo-Section .circle2 {
+    width: 80%;
+    height: 90%;
+    background-color: #943D73;
+    top: 10%;
+    z-index: 2;
+    animation-duration: 7s;
+}
+
+.Logo-Section .circle3 {
+    width: 70%;
+    height: 100%;
+    background-color: #6B4E9A;
+    top: 20%;
+    left: 60%;
+    z-index: 3;
+    animation-duration: 5s;
+}
+
+.Logo-Section .circle4 {
+    width: 50%;
+    height: 70%;
+    background-color: #2E1F3D;
+    top: 40%;
+    left: 70%;
+    z-index: 4;
+    animation-duration: 8s;
+}
+
+.Logo-Section .circle5 {
+    width: 40%;
+    height: 80%;
+    background-color: #3D2232;
+    top: -20%;
+    left: -20%;
+    z-index: 10; /* Niedrigerer Wert */
+    animation-duration: 6.5s;
+}
+
+.Logo-Section .circle6 {
+    width: 70%;
+    height: 100%;
+    background-color: #50253F;
+    top: 45%;
+    left: -20%;
+    z-index: 3;
+    animation-duration: 7.5s;
+}
+
+.Logo-Section .circle7 {
+    width: 80%;
+    height: 90%;
+    background-color: #352C63;
+    top: -40%;
+    left: 50%;
+    z-index: 10; /* Niedrigerer Wert */
+    animation-duration: 5.5s;
+}
+
+.Logo-Section #movingObject {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.Logo-Section .my-svg1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    width: 1400px;
+    height: 1400px;
+}
+
+.Logo-Section .my-svg2 {
+    position: absolute;
+    top: 53%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 98;
+    opacity: 30%;
+    width: 1400px;
+    height: 1400px;
+    animation: logoMove 3s infinite alternate ease-in-out;
+}
+
+@keyframes logoMove {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%) translate(10px, -10px);
+    }
+}
+
+.Logo-Section .animation-text {
+    opacity: 0;
+    transition: opacity 0.9s ease, font-size 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    z-index: 100;
+    text-align: center;
+    animation: floatText 2s infinite alternate ease-in-out; /* Aus erster Datei */
+}
+
+.Logo-Section .animation-text h1 {
+    font-size: 10rem; /* Aus erster Datei, wird von JS überschrieben */
+}
+
+@keyframes floatText {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    100% { transform: translate(-50%, -50%) translateY(-10px); }
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #CD519D;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.title{
+    font-size: 40px;
+    color: white;
+}
+
+.background-circles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Animierte Kreise */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: moveAround 5s infinite alternate ease-in-out;
+    z-index: 1; /* Niedriger z-index, damit sie im Hintergrund bleiben */
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(20px, 20px);
+    }
+}
+
+.circle2 {
+    width: 70%;
+    height: 90%;
+    background-color: #943D73;
+    top: 10%;
+    z-index: 1;
+    animation-duration: 7s;
+}
+
+.circle3 {
+    width: 70%;
+    height: 100%;
+    background-color: #6B4E9A;
+    top: 20%;
+    left: 60%;
+    z-index: 1;
+    animation-duration: 5s;
+}
+
+.circle4 {
+    width: 40%;
+    height: 60%;
+    background-color: #2E1F3D;
+    top: 50%;
+    left: 70%;
+    z-index: 1;
+    animation-duration: 8s;
+}
+
+.circle5 {
+    width: 40%;
+    height: 80%;
+    background-color: #3D2232;
+    top: -20%;
+    left: -20%;
+    z-index: 1;
+    animation-duration: 6.5s;
+}
+
+.circle6 {
+    width: 70%;
+    height: 100%;
+    background-color: #50253F;
+    top: 45%;
+    left: -20%;
+    z-index: 1;
+    animation-duration: 7.5s;
+}
+
+.circle7 {
+    width: 60%;
+    height: 80%;
+    background-color: #352C63;
+    top: -20%;
+    left: 60%;
+    z-index: 1;
+    animation-duration: 5.5s;
+}
+
+h1 {
+    margin: 125px auto;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding: 0;
+    position: relative; /* Ermöglicht z-index */
+    z-index: 10; /* Über den Kreisen */
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.wishlist-container {
+    max-width: 1200px;
+    margin: 170px auto 0 auto;
+    padding: 10px 20px;
+    flex: 1;
+    position: relative;
+    z-index: 10;
+}
+
+.wishlist-table {
+    padding: 20px 0 0 0;
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    border-radius: 20px;
+    background-color: #1E1E1E;
+    overflow: hidden;
+    border: 1px solid #1E1E1E;
+    box-shadow: 0 0 10px #1e1e1e;
+    position: relative; /* Ermöglicht z-index */
+    z-index: 10; /* Über den Kreisen */
+}
+
+thead {
+    color: #943D73;
+    font-size: 25px;
+}
+
+td {
+    color: white;
+}
+
+.wishlist-table th,
+.wishlist-table td {
+    border: none;
+    padding: 8px;
+}
+
+.wishlist-table th {
+    background-color: #1e1e1e;
+}
+
+.wishlist-table tr {
+    background-color: #1e1e1e;
+}
+
+.wishlist-table tr:nth-child(even) {
+    background-color: #272727;
+}
+
+
+
+.wishlist-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.wishlist-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.wishlist-table img {
+    max-width: 90px;
+    height: auto;
+    display: block;
+}
+
+/* Footer sicherstellen, dass er im Vordergrund ist */
+footer {
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bazario | Login</title>
+    <link rel="icon" href="../images/defaultProfile.jpg" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/loginRegister.css">
+    <script type="module" src="javascript/config.js" defer></script>
+    <script type="module" src="javascript/validationLogin.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+<body>
+<!-- Animierte Kreise als Hintergrund -->
+<div class="circle circle2"></div>
+<div class="circle circle3"></div>
+<div class="circle circle4"></div>
+<div class="circle circle5"></div>
+<div class="circle circle6"></div>
+<div class="circle circle7"></div>
+
+<!-- Bestehender Inhalt -->
+<div class="register">
+    <a href="index.html">
+        <button class="home-button">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+    </a>
+    <div class="logo-container">
+        <div class="logo">
+            <img src="images/Logo1%201.svg" alt="Bazario Logo">
+            <h2>Bazario</h2>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2 class="form-title">Login</h2>
+    <form id="form" class="form">
+        <div class="createAcc">
+            <label for="email">Email</label>
+            <input type="text" placeholder="email" id="email">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="createAcc">
+            <label for="password">Password</label>
+            <input type="password" placeholder="password" id="password">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <button type="submit">Submit</button>
+        <a href="register.html" class="not-registered-link">Not registered yet?</a>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+/* Allgemeiner Hintergrund */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #CD519D;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Animierte Kreise */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: moveAround 5s infinite alternate ease-in-out;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(20px, 20px);
+    }
+}
+
+.circle2 {
+    width: 70%;
+    height: 90%;
+    background-color: #943D73;
+    top: 10%;
+    z-index: 2;
+    animation-duration: 7s;
+}
+
+.circle3 {
+    width: 70%;
+    height: 100%;
+    background-color: #6B4E9A;
+    top: 20%;
+    left: 60%;
+    z-index: 3;
+    animation-duration: 5s;
+}
+
+.circle4 {
+    width: 40%;
+    height: 60%;
+    background-color: #2E1F3D;
+    top: 50%;
+    left: 70%;
+    z-index: 4;
+    animation-duration: 8s;
+}
+
+.circle5 {
+    width: 40%;
+    height: 80%;
+    background-color: #3D2232;
+    top: -20%;
+    left: -20%;
+    z-index: 4;
+    animation-duration: 6.5s;
+}
+
+.circle6 {
+    width: 70%;
+    height: 100%;
+    background-color: #50253F;
+    top: 45%;
+    left: -20%;
+    z-index: 3;
+    animation-duration: 7.5s;
+}
+
+.circle7 {
+    width: 60%;
+    height: 80%;
+    background-color: #352C63;
+    top: -20%;
+    left: 60%;
+    z-index: 4;
+    animation-duration: 5.5s;
+}
+
+/* Bestehendes CSS für den Inhalt */
+small {
+    font-family: 'Roboto', sans-serif;
+}
+
+.register {
+    background: #1e1e1e;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #1e1e1e;
+}
+
+.register h2 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+}
+
+#first {
+    margin-top: 20px;
+}
+
+.home-button {
+    border-color: transparent;
+    background: none;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin-right: 0;
+}
+
+.logo h2 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    margin: -10%;
+    text-transform: uppercase;
+}
+
+/* Container für das Formular */
+.container {
+    padding: 15px 0;
+    background: transparent;
+    border: 2px solid #1e1e1e;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #1e1e1e;
+    width: 400px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+}
+
+.form-title {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+/* Formular-Styling */
+.form {
+    padding: 0 30px 15px 30px;
+}
+
+/* Eingabefeld-Gruppe */
+.createAcc {
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* Wenn eine Fehlermeldung sichtbar ist */
+.createAcc.error {
+    padding-bottom: 18px;
+}
+
+.createAcc label {
+    display: block;
+    margin-bottom: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.createAcc input {
+    background-color: #1E1E1E;
+    border: 2px solid #1E1E1E;
+    border-radius: 4px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.createAcc input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+/* Icon-Styling */
+.createAcc i.fa-check-circle,
+.createAcc i.fa-exclamation-circle {
+    color: #2ecc71; /* Standardfarbe für Check, wird bei Error überschrieben */
+    visibility: hidden;
+    position: absolute;
+    right: 10px;
+    top: 33px; /* Höhe des Labels (13px + 2px margin-bottom) + halbe Höhe des Inputs (29px / 2 = 14.5px) */
+    transform: translateY(-50%);
+}
+
+.createAcc.error i.fa-exclamation-circle {
+    color: #dc3545;
+    visibility: visible;
+}
+
+.createAcc.success i.fa-check-circle {
+    visibility: visible;
+}
+
+.createAcc small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    font-size: 11px;
+    padding: 1px 0;
+}
+
+.createAcc.error small {
+    visibility: visible;
+}
+
+/* Submit-Button */
+.form button {
+    background-color: #943D73;
+    border: 2px solid #CD519D;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #CD519D;
+}
+
+/* Text/Button */
+.not-registered-link {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.not-registered-link:hover {
+    color: #b1b1b1;
+}

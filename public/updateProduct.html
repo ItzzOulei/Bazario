@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bazario | Update Product</title>
+    <link rel="icon" href="../images/defaultProfile.jpg" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/updateProduct.css">
+    <script type="module" src="javascript/updateProduct.js" defer></script>
+</head>
+<body>
+<div id="contentWrapper">
+    <div class="add-product-form" id="updateProductFormContainer">
+        <div class="form-header">
+            <h3>Update Product</h3>
+            <div class="deleteIcon">
+                    <span>
+                        <svg id="deleteIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M10 11v6M14 11v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/>
+                        </svg>
+                    </span>
+            </div>
+        </div>
+        <form id="updateProductForm">
+            <div class="form-group">
+                <label class="add-Product-label" for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <span class="error-message" id="title-error"></span>
+            </div>
+            <div class="form-group">
+                <label class="add-Product-label" for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <span class="error-message" id="description-error"></span>
+            </div>
+            <div class="form-group">
+                <label class="add-Product-label" for="price">Price (CHF):</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+                <span class="error-message" id="price-error"></span>
+            </div>
+            <div class="form-group">
+                <label class="add-Product-label" for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+                <span class="error-message" id="stock-error"></span>
+            </div>
+            <div class="form-group">
+                <label class="add-product-label" for="rabatt">Rabatt:</label>
+                <input type="number" id="rabatt" name="rabatt">
+                <span class="error-message" id="rabatt-error"></span>
+            </div>
+            <div class="form-group">
+                <label class="add-Product-label" for="category">Category:</label>
+                <div class="custom-select">
+                    <div class="select-button" id="category-button">Select a category</div>
+                    <ul class="select-options" id="category-options">
+                        <li data-value="Electronics">Electronics</li>
+                        <li data-value="Clothing">Clothing</li>
+                        <li data-value="Books">Books</li>
+                        <li data-value="Home & Garden">Home & Garden</li>
+                        <li data-value="Toys">Toys</li>
+                    </ul>
+                </div>
+                <input type="hidden" id="category" name="category" required>
+                <span class="error-message" id="category-error"></span>
+            </div>
+            <label class="add-Product-label" for="image">Product Image:</label>
+            <div class="image-area-container">
+                <div class="image-area" id="image-area">
+                        <span class="upload-icon">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h3a3 3 0 0 0 0-6h-.025a5.56 5.56 0 0 0 .025-.5A5.5 5.5 0 0 0 7.207 9.021C7.137 9.017 7.071 9 7 9a4 4 0 1 0 0 8h2.167M12 19v-9m0 0-2 2m2-2 2 2"/>
+                            </svg>
+                        </span>
+                    <h3 class="upload-text">Upload Image</h3>
+                    <p class="description-for-image">Drag or select image <span>here</span></p>
+                </div>
+                <label class="custom-file-upload" for="image">Choose image</label>
+                <input class="select-image" type="file" id="image" name="image" accept="image/*">
+                <span class="error-message" id="image-error"></span>
+                <p class="file-name" id="file-name">No file selected</p>
+            </div>
+            <button type="submit">Update Product</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

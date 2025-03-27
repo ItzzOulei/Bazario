@@ -1,0 +1,134 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.cartTab {
+    padding: 10px;
+    width: 400px;
+    background: #1E1E1E;
+    color: white;
+    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: right 0.5s ease;
+    z-index: 1000000;
+    border: 2px solid #1E1E1E;
+    box-sizing: border-box;
+}
+
+body.showCart .cartTab {
+    right: 0;
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.cartTab .btn button {
+    background-color: #943D73;
+    border: none;
+    font-family: Bahnschrift;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.cartTab .btn .close {
+    background-color: #CD519D;
+}
+
+.cartTab .listCart .item img {
+    width: 100%;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 120px 50px 90px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    min-width: 80px;
+}
+
+.listCart .quantity span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: purple;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: white;
+    width: auto;
+    padding: 0 5px;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #272727;
+}
+
+.listCart {
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Responsive Anpassung */
+@media only screen and (max-width: 400px) {
+    .cartTab {
+        width: 100%;
+        right: -100%;
+    }
+    body.showCart .cartTab {
+        right: 0;
+    }
+    .cartTab .listCart .item {
+        grid-template-columns: 60px 100px 40px 80px;
+    }
+    .listCart .quantity {
+        min-width: 70px;
+    }
+    .listCart .quantity span {
+        width: 18px;
+        height: 18px;
+        font-size: 0.8rem;
+    }
+}

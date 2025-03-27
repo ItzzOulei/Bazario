@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bazario | Edit Profile</title>
+  <link rel="icon" href="../images/defaultProfile.jpg" type="image/png">
+  <link rel="stylesheet" href="css/settingsProfile.css">
+  <script type="module" src="javascript/config.js" defer></script>
+  <script type="module" src="javascript/settingsProfile.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+<body>
+<!-- Animierte Kreise als Hintergrund -->
+<div class="circle circle2"></div>
+<div class="circle circle3"></div>
+<div class="circle circle4"></div>
+<div class="circle circle5"></div>
+<div class="circle circle6"></div>
+<div class="circle circle7"></div>
+
+<div class="profile-container">
+  <h3>Edit Profile</h3>
+
+  <div class="profile-picture-wrapper">
+    <img src="images/defaultProfile.jpg" alt="Profil Picture" id="profilePic" class="profile-picture">
+    <span class="edit-icon" id="editingIcon">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.3 4.8 2.9 2.9M7 17H17l3-3V7a1 1 0 0 0-1-1h-3M4 20v-3L14.3 6.7a1 1 0 0 1 1.4 0l2.9 2.9a1 1 0 0 1 0 1.4L8.4 21.3A1 1 0 0 1 7 22H4a1 1 0 0 1-1-1Z"/>
+      </svg>
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="password">New Password:</label>
+    <input type="password" id="password" placeholder="Enter New Password">
+  </div>
+
+  <div class="form-group">
+    <label for="password2">Confirm New Password:</label>
+    <input type="password" id="password2" placeholder="Confirm New Password">
+  </div>
+
+  <div class="bottom-buttons">
+    <button id="saveProfileButton" class="save-button">Save Changes</button>
+    <button onclick="history.back()" class="discard-button">Discard Changes</button>
+  </div>
+</div>
+
+<!-- Slide-Down-Container für Profilbild-Änderung -->
+<div class="overlay" id="overlay"></div>
+<div class="upload-slide" id="uploadSlide">
+  <h3 id="title-profile-picture">Edit Profile Picture</h3>
+  <div class="image-area" id="imageArea">
+    <span class="upload-icon">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h3a3 3 0 0 0 0-6h-.025a5.56 5.56 0 0 0 .025-.5A5.5 5.5 0 0 0 7.207 9.021C7.137 9.017 7.071 9 7 9a4 4 0 1 0 0 8h2.167M12 19v-9m0 0-2 2m2-2 2 2"/>
+      </svg>
+    </span>
+    <h3 id="upload-text">Upload image</h3>
+    <p class="description-for-image">Drag or select image <span>here</span></p>
+    <img id="previewImage" src="" alt="Preview" style="display: none;">
+  </div>
+  <input type="file" id="pictureInput" class="select-image" accept="image/*">
+  <label for="pictureInput" class="custom-file-upload">Select Image</label>
+  <div class="upload-message" id="uploadMessage"></div>
+  <button id="closeSlideButton" class="close-button">Save</button>
+</div>
+</body>
+</html>

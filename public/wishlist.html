@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist - Bazario</title>
+  <link rel="stylesheet" href="css/wishlist.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/shoppingCart.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/back.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script type="module" src="javascript/config.js" defer></script>
+  <script type="module" src="javascript/shoppingCart.js" defer></script>
+  <script type="module" src="javascript/nav.js" defer></script>
+  <script type="module" src="javascript/wishlist.js" defer></script>
+</head>
+<body>
+<div class="background-circles">
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="circle circle5"></div>
+  <div class="circle circle6"></div>
+  <div class="circle circle7"></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-left">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <h1>Bazario</h1>
+      </a>
+    </div>
+    <div>
+      <div class="vertical-line"></div>
+    </div>
+    <ul id="hideNav" class="nav-main-menu">
+      <li class="dropdown">
+        <a href="/products.html?categoryId=1" class="nav-link"><span>Electronics</span> <i class="fa fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="#">Gaming & PCs</a></li>
+          <li><a href="#">Peripherals</a></li>
+          <li><a href="#">TV & Home</a></li>
+        </ul>
+      <li><a href="/products.html?categoryId=7" class="nav-link">Home & Garden</a></li>
+      <li class="dropdown">
+        <a href="/products.html?categoryId=3" class="nav-link"><span>Clothing</span> <i class="fa fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Woman</a></li>
+          <li><a href="#">Children</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="nav-link"><span>Books & Movies</span> <i class="fa fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="/products.html?categoryId=2">Books</a></li>
+          <li class="sub-dropdown">
+            <a href="/products.html?categoryId=9" class="dropdown-link"><span>Movies</span> <i class="fa fa-chevron-right"></i></a>
+            <ul class="sub-dropdown-content">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Drama</a></li>
+              <li><a href="#">Comedy</a></li>
+              <li><a href="#">Science Fiction</a></li>
+              <li><a href="#">Horror</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <form class="form">
+      <label for="search">
+        <input class="input" type="text" required="" placeholder="Search" id="search">
+        <div class="fancy-bg"></div>
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+            <g>
+              <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+            </g>
+          </svg>
+        </div>
+        <button class="close-btn" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </label>
+    </form>
+    <div class="header-icons">
+      <div class="wishlist-icon">
+        <a href="wishlist.html">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z"/>
+          </svg>
+        </a>
+      </div>
+      <div id="iconLoader"></div>
+      <div class="icon-cart" id="iconCart">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+        <span>0</span>
+      </div>
+      <button id="burgerIcon" class="menu-toggle"><i class="fa fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+<div class="wishlist-container">
+  <table class="wishlist-table">
+    <thead>
+    <tr>
+      <th colspan="5" class="title">Wishlist</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><img src="testimage/testimg1.jpg" alt="Artikel 1 Bild"></td>
+      <td>Beispiel Artikel 1</td>
+      <td>Eine kurze Beschreibung</td>
+      <td>29,99 €</td>
+      <td><button class="remove-btn">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z" clip-rule="evenodd"/>
+        </svg>
+      </button></td>
+    </tr>
+    <!-- Weitere Zeilen bleiben gleich -->
+    </tbody>
+  </table>
+</div>
+<!-- Shoppingcart window -->
+<div class="cartTab">
+  <h1>Shopping Cart</h1>
+  <div class="listCart">
+    <!-- Dynamisch durch JS gefüllt -->
+  </div>
+  <div class="btn">
+    <button class="close">CLOSE</button>
+    <button class="checkout">CHECK OUT</button>
+  </div>
+</div>
+<footer>
+  <hr>
+  <div id='footerContainer'>
+    <div>
+      <h3 class='titleName'>BAZARIO</h3>
+    </div>
+    <div class='footer-boxes'>
+      <h4>Payment Methods</h4>
+      <div class='payment-method'>
+        <img src='images/mastercard.svg' alt='Mastercard'>
+        <img src='images/postfinance-pay.svg' alt='Postfinance'>
+        <img src='images/apple-pay.svg' alt='Apple Pay'>
+        <img src='images/visa.svg' alt='Visa'>
+      </div>
+    </div>
+    <div class='footer-boxes'>
+      <h4>Terms & Conditions</h4>
+      <p>Impressum</p>
+      <p>AGB</p>
+      <p>Data Privacy</p>
+    </div>
+    <div class='footer-boxes'>
+      <h4>Contact</h4>
+      <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3babdb5bc93b1b2a9b2a1babcfdb0bcbe">[email&#160;protected]</a></p>
+      <p>087 369 71 69</p>
+      <p>Engehaldenstrasse 26</p>
+    </div>
+    <div>
+      <img src='https://maps.googleapis.com/maps/api/staticmap?center=Engehaldenstrasse+26&zoom=16&size=150x100&key=AIzaSyDF62POkFMZpB3r1QWkywCeoqHoPlUsxy4' alt='Map'>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

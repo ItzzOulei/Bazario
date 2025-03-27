@@ -1,0 +1,53 @@
+[
+  {
+    "id_product": 1,
+    "title": "TestProduct",
+    "picture": "../testimage/testimg1.jpg",
+    "description": "ist cool",
+    "price": 150,
+    "stock": 10,
+    "creation_date": "12.12.25",
+    "user_id": 1,
+    "genre_id": 3,
+    "subgenre_id": 4
+  },
+
+  {
+    "id_product": 2,
+    "title": "TestProduct2",
+    "picture": "../testimage/testimg1.jpg",
+    "description": "ist cool",
+    "price": 240,
+    "stock": 10,
+    "creation_date": "12.12.25",
+    "user_id": 1,
+    "genre_id": 3,
+    "subgenre_id": 4
+  },
+
+  {
+    "id_product": 3,
+    "title": "TestProduct3",
+    "picture": "../testimage/testimg1.jpg",
+    "description": "ist cool",
+    "price": 245,
+    "stock": 10,
+    "creation_date": "12.12.25",
+    "user_id": 1,
+    "genre_id": 3,
+    "subgenre_id": 4
+  },
+
+  {
+    "id_product": 4,
+    "title": "TestProduct4",
+    "picture": "../testimage/testimg1.jpg",
+    "description": "ist cool",
+    "price": 340,
+    "stock": 10,
+    "creation_date": "12.12.25",
+    "user_id": 1,
+    "genre_id": 3,
+    "subgenre_id": 4
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "name": "pt_bazario",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BA-2024-2025/PT_Bazario.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BA-2024-2025/PT_Bazario/issues"
+  },
+  "homepage": "https://github.com/BA-2024-2025/PT_Bazario#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.14.0",
+    "promise": "^8.3.0",
+    "sharp": "^0.33.5",
+    "socket.io": "^4.8.1"
+  }
+}

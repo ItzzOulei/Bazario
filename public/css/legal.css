@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1E1E1E;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    position: fixed; /* Header bleibt oben fixiert */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Stellt sicher, dass der Header über dem Inhalt bleibt */
+}
+
+main {
+    flex: 1; /* Nimmt den verfügbaren Raum zwischen Header und Footer ein */
+    padding-top: 90px; /* Platz für den fixierten Header (anpassen je nach Header-Höhe) */
+    padding-bottom: 20px; /* Platz vor dem Footer */
+    overflow-y: auto; /* Ermöglicht vertikales Scrollen, wenn der Inhalt zu lang ist */
+}
+
+.legal-section {
+    background: #2A2A2A;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left; /* Links ausgerichtet für bessere Lesbarkeit */
+}
+
+.legal-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #CD519D;
+    text-align: center; /* Überschrift bleibt zentriert */
+}
+
+.legal-section h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.legal-section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.legal-section a {
+    color: #CD519D;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-section a:hover {
+    color: #fff;
+}
+
+footer {
+    background: #1E1E1E;
+    padding: 20px 0;
+    width: 100%;
+    /* Kein 'position: fixed' hier, damit der Footer nicht fixiert ist */
+}

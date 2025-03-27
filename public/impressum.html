@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Bazario</title>
+    <link rel="icon" href="../images/defaultProfile.jpg" type="image/jpg">
+    <link rel='stylesheet' href='css/footer.css'>
+    <link rel="stylesheet" href="css/category-style.css">
+    <link rel="stylesheet" href="css/backgroundAnimation.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/legal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="module" src="javascript/shoppingCart.js" defer></script>
+    <script type="module" src="javascript/index.js" defer></script>
+    <script type="module" src="javascript/config.js" defer></script>
+    <script type="module" src="javascript/scrollanimation.js" defer></script>
+    <script type="module" src="javascript/nav.js" defer></script>
+</head>
+<body>
+<!-- Header (Navigation) -->
+<nav class="nav">
+    <div class="nav-left">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <h1>Bazario</h1>
+            </a>
+        </div>
+        <div>
+            <div class="vertical-line"></div>
+        </div>
+        <ul id="hideNav" class="nav-main-menu">
+            <li class="dropdown">
+                <a href="/products.html" class="nav-link"><span>Entertainment</span> <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="/products.html?categoryId=2">Books</a></li>
+                    <li><a href="/products.html?categoryId=6">Toys</a></li>
+                    <li><a href="/products.html?categoryId=9">Movie</a></li>
+                </ul>
+            </li>
+            <li><a href="/products.html?categoryId=1" class="nav-link">Electronics</a></li>
+            <li><a href="/products.html?categoryId=3" class="nav-link">Clothing</a></li>
+            <li class="dropdown">
+                <a href="/products.html" class="nav-link"><span>Food & Beverage</span> <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="/products.html?categoryId=8">Food</a></li>
+                    <li><a href="/products.html?categoryId=10">Drinks</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <form class="form">
+            <label for="search">
+                <input class="input" type="text" required="" placeholder="Search" id="search">
+                <div class="fancy-bg"></div>
+                <div class="search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <button class="close-btn" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </label>
+        </form>
+        <div class="header-icons">
+            <div class="wishlist-icon">
+                <a href="wishlist.html">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div id="iconLoader" class="profile-dropdown"></div> <!-- Profil-Dropdown-Klasse hinzugefügt -->
+            <div class="icon-cart" id="iconCart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span>
+            </div>
+            <button id="burgerIcon" class="menu-toggle"><i class="fa fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hauptinhalt -->
+<main>
+    <section class="legal-section">
+        <h1>Imprint</h1>
+
+        <h2>Company Information</h2>
+        <p>Bazario GmbH</p>
+        <p>Engehaldenstrasse 26</p>
+        <p>CH-3004 Bern</p>
+        <p>Switzerland</p>
+
+        <h2>Contact Details</h2>
+        <p>Email: <a href="mailto:info@bazario.com">info@bazario.com</a></p>
+        <p>Phone: +41 87 369 71 69</p>
+
+        <h2>Legal Representatives</h2>
+        <p>Managing Director: Max Mustermann</p>
+        <p>Chairman of the Board: Anna Beispiel</p>
+
+        <h2>Commercial Register</h2>
+        <p>Registered in the Commercial Register of the Canton of Bern</p>
+        <p>Company Number: CHE-123.456.789</p>
+
+        <h2>VAT Identification Number</h2>
+        <p>VAT ID: CHE-123.456.789 MWST</p>
+
+        <h2>Responsible for Content</h2>
+        <p>Bazario GmbH<br>Engehaldenstrasse 26<br>CH-3004 Bern<br>Email: <a href="mailto:info@bazario.com">info@bazario.com</a></p>
+
+        <h2>Disclaimer</h2>
+        <p>The content on this website is provided for general information purposes only. Bazario GmbH assumes no liability for the accuracy, completeness, or timeliness of the information provided. External links are provided for convenience, and we are not responsible for the content of linked websites.</p>
+
+        <p>Last updated: March 26, 2025</p>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <hr>
+    <div id='footerContainer'>
+        <div>
+            <h3 class='titleName'>BAZARIO</h3>
+        </div>
+        <div class='footer-boxes'>
+            <h4>Payment Methods</h4>
+            <div class='payment-method'>
+                <img src='images/mastercard.svg' alt='Mastercard'>
+                <img src='images/postfinance-pay.svg' alt='Postfinance'>
+                <img src='images/apple-pay.svg' alt='Apple Pay'>
+                <img src='images/visa.svg' alt='Visa'>
+            </div>
+        </div>
+        <div class='footer-boxes'>
+            <h4>Terms & Conditions</h4>
+            <a href="impressum.html" class="Information">Impressum</a>
+            <a href="agb.html" class="Information">AGB</a>
+            <a href="dataprivacy.html" class="Information">Data Privacy</a>
+        </div>
+        <div class='footer-boxes'>
+            <h4>Contact</h4>
+            <p>info@bazario.com</p>
+            <p>087 369 71 69</p>
+            <p>Engehaldenstrasse 26</p>
+        </div>
+        <div>
+            <img src='https://maps.googleapis.com/maps/api/staticmap?center=Engehaldenstrasse+26&zoom=16&size=150x100&key=AIzaSyDF62POkFMZpB3r1QWkywCeoqHoPlUsxy4'
+                 alt='Map'>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

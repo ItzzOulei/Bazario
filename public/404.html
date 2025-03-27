@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazario | 404</title>
+    <link rel="icon" href="../images/defaultProfile.jpg" type="image/png">
+    <link rel='stylesheet' href='css/footer.css'>
+    <link rel="stylesheet" href="css/backgroundAnimation.css">
+    <style>
+    </style>
+</head>
+<body>
+<section class="Logo-Section">
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+    <div class="redirect-text">
+        <h1>404</h1>
+        <h3>Oops! The page you’re looking for doesn’t exist :-)</h3>
+        <p>Redirecting to the homepage in <span id="countdown">10</span> seconds...</p>
+    </div>
+</section>
+<script>
+    const countdownElement = document.getElementById('countdown');
+    let seconds = 10;
+
+    const countdown = setInterval(() => {
+        seconds--;
+        countdownElement.textContent = seconds;
+
+        if (seconds <= 0) {
+            clearInterval(countdown);
+            window.location.href = '/';
+        }
+    }, 1000); // Runs every 1000ms (1 second)
+</script>
+</body>
+</html>

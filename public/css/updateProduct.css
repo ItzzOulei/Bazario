@@ -1,0 +1,40 @@
+body {
+    background-color: #1E1E1E;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-product-form {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between; /* Ensures elements are spaced apart */
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the header takes full width */
+}
+
+.form-header h3 {
+    margin: 0;
+}
+
+.deleteIcon {
+    margin-left: auto; /* Pushes the delete icon to the far right */
+}
+
+#deleteIcon {
+    cursor: pointer; /* Makes it clear it's clickable */
+    transition: color 0.3s ease-in-out;
+}
+
+#deleteIcon:hover {
+    color: #943D73;
+}

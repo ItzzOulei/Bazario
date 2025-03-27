@@ -1,0 +1,651 @@
+body {
+    background-color: #1E1E1E;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentWrapper {
+    padding: 0 20px 20px 20px;
+    max-width: 800px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.hrNav {
+    margin-top: 44.3px;
+    width: 100%;
+}
+
+hr {
+    color: #943D73;
+    border-color: #943D73;
+    border-width: 1px;
+    width: 100%;
+}
+h3 {
+    font-size: 18px;
+}
+
+/* User Profile */
+#userContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 7%;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.user-item img {
+    border: 3px solid #943D73;
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 30%;
+    height: auto;
+}
+
+.user-details {
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details .description {
+    margin: 5px 0px 5px 30px;
+    font-size: 15px;
+}
+
+.user-details .username {
+    margin: 20px 0px 20px 30px;
+    font-size: 20px;
+    color: #943D73;
+    font-weight: normal;
+}
+
+#productContainer {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px 7% 0 7%;
+
+}
+
+/* Add Product */
+
+#addProductForm {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    display: block; /* Neu: Flexbox für Zentrierung */
+}
+
+.add-product-form {
+    width: 100%;
+    max-width: 500px;
+    color: white;
+    margin-left: auto; /* Neu: Zentrierung */
+    margin-right: auto; /* Neu: Zentrierung */
+}
+
+.product-details .title {
+    font-size: 16px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-details .description {
+    font-size: 10px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-details .publisher {
+    font-size: 10px;
+    text-align: left;
+
+}
+
+.product-details .price {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.product-details .bottomProductLabels {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.product-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 30%;
+    max-width: 150px;
+    border-right: 1px solid #A4A4A4;
+    border-left: 1px solid #A4A4A4;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+.product-item img {
+    margin-right: 15px;
+    width: 100%;
+    height: auto;
+}
+
+.product-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.no-product-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding-right: 7%;
+}
+
+.user-settings {
+    margin-left: auto;
+    margin-bottom: auto;
+    max-width: 100px;
+    height: 100px;
+}
+
+.user-settings button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.user-settings img {
+    background: transparent;
+    border: none;
+    color: white;
+    filter: invert(100%);
+}
+
+.user-settings img:hover {
+    transition: 0.2s;
+}
+
+#profileCategories {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    margin-top: 10px;
+    margin-left: 7%;
+}
+
+#profileCategories p {
+    margin: 0 20px 0px 0px;
+    color: #9a9a9a;
+}
+
+#profileCategories p:hover {
+    cursor: pointer;
+    color: #943D73;
+}
+
+#profileCategories .clicked {
+    color: white;
+}
+
+html {
+    height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#description {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Neues CSS für das benutzerdefinierte Dropdown */
+.custom-select {
+    position: relative;
+    display: block; /* Änderung: Von inline-block zu block, damit es die volle Breite einnimmt */
+    width: 100%;
+}
+
+.select-button {
+    padding: 5px 40px;
+    border: solid 1px #A4A4A4;
+    border-radius: 4px;
+    background-color: #292929;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    min-width: 190px;
+    display: block; /* Änderung: Von inline-block zu block */
+    width: 100%;
+}
+
+.select-button::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white; /* Weißer Pfeil */
+}
+
+.select-options {
+    display: none; /* Standardmäßig ausgeblendet */
+    position: static;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #A4A4A4;
+    border-top: none; /* Kein oberer Rand, um nahtlos an den Button anzuschließen */
+    opacity: 0; /* Startet unsichtbar für die Animation */
+    transform: translateY(-10px); /* Startet leicht oberhalb für den Slide-Down-Effekt */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.select-options.active {
+    display: block;
+    opacity: 1; /* Wird sichtbar */
+    transform: translateY(0);
+}
+
+.select-options li {
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.select-options li:nth-child(even) {
+    background-color: #292929;
+}
+
+.select-options li:hover {
+    background-color: #943D73;
+}
+
+.add-product-form {
+    width: 100%;
+    max-width: 500px;
+    color: white;
+}
+
+.add-product-form h3 {
+    color: #CD519D;
+    margin-bottom: 20px;
+}
+
+.add-product-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-product-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 0;
+    height: auto;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: #292929;
+    border: 1px solid #A4A4A4;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.add-product-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.add-product-form button {
+    background-color: #CD519D;
+    color: white;
+    padding: 5px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+}
+
+.add-product-form button:hover {
+    background-color: #943D73;
+}
+
+.image-area-container .image-area h3 {
+    color: #CD519D;
+    margin: 10px;
+    padding: 0;
+}
+
+.image-area-container .image-area svg {
+    transform: scale(3);
+    margin-bottom: 10px;
+}
+
+.image-area-container .image-area span {
+    font-weight: bolder;
+}
+
+.description-for-image {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #A4A4A4;
+}
+
+.image-area-container {
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #292929;
+    margin-bottom: 15px;
+
+}
+
+.image-area {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background-color: #1E1E1E;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+/* Stil für Drag-and-Drop-Effekt */
+.image-area.dragover {
+    background-color: #2A2A2A; /* Etwas helleres Grau, wenn ein Bild gezogen wird */
+    border: 2px dashed #CD519D; /* Gestrichelter Rand in Lila */
+}
+
+/* Stil für die Bildvorschau */
+.image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down; /* Bild wird skaliert, ohne verzerrt zu werden */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Verstecke den nativen Datei-Upload-Button */
+.select-image {
+    display: none;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+}
+
+/* Benutzerdefinierter Button für den Datei-Upload */
+.custom-file-upload {
+    display: inline-block;
+    padding: 5px 40px !important;
+    border: solid 1px #A4A4A4;
+    background-color: #1E1E1E;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+    text-align: center;
+    min-width: 190px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    height: 32px;
+}
+
+
+.custom-file-upload:hover {
+    background-color: #943D73;
+}
+
+.custom-file-upload {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil für den Dateinamen */
+.file-name {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #A4A4A4;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Stellt sicher, dass der Container die volle Breite des Bildes nutzt */
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert das Icon genau in der Mitte */
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.edit-icon a {
+    display: block;
+}
+
+.product-item[data-uploaded="true"] {
+    position: relative;
+}
+
+.product-item[data-uploaded="true"] img{
+    transition: filter 0.2s ease;
+}
+
+.product-item[data-uploaded="true"]:hover img {
+    filter: brightness(70%);
+}
+
+.edit-icon svg {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+
+.product-item[data-uploaded="true"]:hover .edit-icon{
+    opacity: 1 !important;
+}
+
+/* Badges and tooltip*/
+.badge-picture-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.badge-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid #943D73;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.badge-picture:hover {
+    transform: scale(1.1);
+}
+
+.badge-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 200px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.badge-picture-container:hover .badge-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.badge-tooltip .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #943D73;
+}
+
+.badge-tooltip .description {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0;
+}
+
+.badge-item {
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gesamter Container */
+#productContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* 'auto' hinzugefügt für horizontale Zentrierung */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Wrapper für Produktgruppen */
+#productWrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0; /* 'auto' entfernt, da es hier nicht nötig ist */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Überschrift für aktive und inaktive Produkte */
+.active-products h2,
+.inactive-products h2 {
+    color: #CD519D;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Zeile für Produkt-Container */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Volle Breite nutzen */
+    max-width: 660px; /* 3 x 200px + 2 x 20px gap = 640px + etwas Puffer */
+}
+
+/* Einzelne Produkt-Items */
+.product-item {
+    width: 200px; /* Feste Breite */
+    flex: 0 0 200px; /* Feste Breite, kein Skalieren */
+    /* max-width entfernt, da width bereits festgelegt ist */
+}
+
+/* Optionale Anpassung für inaktive Produkte */
+.inactive-products .product-item {
+    opacity: 0.7;
+    filter: brightness(70%); /* 'Filter' kleingeschrieben */
+}
+
+#wishlist{
+    padding: 0;
+    margin: 0;
+}

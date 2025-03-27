@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGB - Bazario</title>
+    <link rel="icon" href="../images/defaultProfile.jpg" type="image/jpg">
+    <link rel='stylesheet' href='css/footer.css'>
+    <link rel="stylesheet" href="css/category-style.css">
+    <link rel="stylesheet" href="css/backgroundAnimation.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/legal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="module" src="javascript/shoppingCart.js" defer></script>
+    <script type="module" src="javascript/index.js" defer></script>
+    <script type="module" src="javascript/config.js" defer></script>
+    <script type="module" src="javascript/scrollanimation.js" defer></script>
+    <script type="module" src="javascript/nav.js" defer></script>
+</head>
+<body>
+<!-- Header (Navigation) -->
+<nav class="nav">
+    <div class="nav-left">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <h1>Bazario</h1>
+            </a>
+        </div>
+        <div>
+            <div class="vertical-line"></div>
+        </div>
+        <ul id="hideNav" class="nav-main-menu">
+            <li class="dropdown">
+                <a href="/products.html?categoryId=1" class="nav-link"><span>Electronics</span> <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Gaming & PCs</a></li>
+                    <li><a href="#">Peripherals</a></li>
+                    <li><a href="#">TV & Home</a></li>
+                </ul>
+            </li>
+            <li><a href="/products.html?categoryId=7" class="nav-link">Home & Garden</a></li>
+            <li class="dropdown">
+                <a href="/products.html?categoryId=3" class="nav-link"><span>Clothing</span> <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="#">Children</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link"><span>Books & Movies</span> <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="/products.html?categoryId=2">Books</a></li>
+                    <li class="sub-dropdown">
+                        <a href="/products.html?categoryId=9" class="dropdown-link"><span>Movies</span> <i class="fa fa-chevron-right"></i></a>
+                        <ul class="sub-dropdown-content">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Drama</a></li>
+                            <li><a href="#">Comedy</a></li>
+                            <li><a href="#">Science Fiction</a></li>
+                            <li><a href="#">Horror</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <form class="form">
+            <label for="search">
+                <input class="input" type="text" required="" placeholder="Search" id="search">
+                <div class="fancy-bg"></div>
+                <div class="search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <button class="close-btn" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </label>
+        </form>
+        <div class="header-icons">
+            <div class="wishlist-icon">
+                <a href="wishlist.html">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div id="iconLoader" class="profile-dropdown"></div>
+            <div class="icon-cart" id="iconCart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span>
+            </div>
+            <button id="burgerIcon" class="menu-toggle"><i class="fa fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hauptinhalt -->
+<main>
+    <section class="legal-section">
+        <h1>General Terms and Conditions (GTC)</h1>
+
+        <h2>1. Scope of Application</h2>
+        <p>These General Terms and Conditions (GTC) apply to all contracts concluded between Bazario GmbH (hereinafter "Bazario", "we", or "us") and the users (hereinafter "you" or "user") of the online platform "Bazario" (hereinafter "Platform"). The Platform serves as a marketplace for the sale and purchase of goods between registered users. By registering or using the Platform, you agree to these GTC in their entirety.</p>
+
+        <h2>2. Registration and User Account</h2>
+        <p>2.1 To use the full functionality of the Platform (e.g., selling or purchasing products), registration is required. You must be at least 18 years old and provide accurate and complete information during registration, including your first name, last name, username, email address, and date of birth.</p>
+        <p>2.2 Each user may only create one account. The account is personal and non-transferable. You are responsible for keeping your login credentials (email and password) confidential and for all activities conducted through your account.</p>
+        <p>2.3 Bazario reserves the right to refuse registration or terminate accounts at its discretion, particularly in cases of suspected misuse or violation of these GTC.</p>
+
+        <h2>3. Use of the Platform</h2>
+        <p>3.1 Users may offer goods for sale ("Sellers") or purchase goods ("Buyers") via the Platform. Bazario acts solely as an intermediary and is not a party to the sales contract between Seller and Buyer.</p>
+        <p>3.2 Sellers are responsible for ensuring that their listings (including product descriptions, images, prices, stock levels, and discounts) are accurate and comply with applicable laws. Prohibited items (e.g., illegal goods, counterfeit products) may not be offered.</p>
+        <p>3.3 Buyers may add items to their shopping cart and complete purchases through the Platform. The contract of sale is concluded directly between the Buyer and Seller upon purchase confirmation.</p>
+
+        <h2>4. Prices and Payment</h2>
+        <p>4.1 All prices listed on the Platform are set by the Sellers and include applicable taxes unless otherwise stated. Shipping costs may apply and will be displayed during the checkout process.</p>
+        <p>4.2 Bazario supports multiple payment methods, including Mastercard, Visa, PostFinance, and Apple Pay. Payment processing is handled by third-party providers, and users agree to their terms during checkout.</p>
+        <p>4.3 Sellers receive payment minus a commission fee charged by Bazario, as outlined in the Seller Agreement (available upon request).</p>
+
+        <h2>5. Delivery and Shipping</h2>
+        <p>5.1 Sellers are responsible for shipping purchased goods to Buyers in a timely manner. Shipping terms (e.g., costs, delivery times) must be clearly stated in the product listing.</p>
+        <p>5.2 Bazario is not liable for delays, damages, or losses during shipping. Any disputes regarding delivery must be resolved directly between Buyer and Seller.</p>
+
+        <h2>6. Reviews and Ratings</h2>
+        <p>6.1 Buyers may submit reviews and ratings for purchased products and Sellers. Reviews must be factual, respectful, and comply with applicable laws. Bazario reserves the right to remove reviews that violate these terms.</p>
+        <p>6.2 Sellers may not review their own products. Any attempt to manipulate ratings will result in account suspension.</p>
+
+        <h2>7. Right of Withdrawal</h2>
+        <p>7.1 As Bazario is a platform for transactions between private users, there is no statutory right of withdrawal unless explicitly offered by the Seller. Buyers should review the Seller’s return policy before purchasing.</p>
+        <p>7.2 Returns and refunds are handled directly between Buyer and Seller. Bazario may mediate disputes but is not obligated to do so.</p>
+
+        <h2>8. Liability</h2>
+        <p>8.1 Bazario strives to ensure the Platform’s availability and functionality but does not guarantee uninterrupted access. We are not liable for technical issues, data loss, or interruptions beyond our control.</p>
+        <p>8.2 Bazario is not responsible for the quality, safety, or legality of goods sold, nor for the accuracy of listings or the conduct of users. Liability for transactions lies solely with the respective Seller or Buyer.</p>
+
+        <h2>9. Intellectual Property</h2>
+        <p>9.1 All content on the Platform (e.g., logos, designs, text) is the property of Bazario or its licensors and may not be used without permission.</p>
+        <p>9.2 Users grant Bazario a non-exclusive, royalty-free license to use uploaded content (e.g., product images, descriptions) for the purpose of operating and promoting the Platform.</p>
+
+        <h2>10. Termination</h2>
+        <p>10.1 Users may terminate their account at any time via the settings page. Upon termination, all listings and data associated with the account may be deleted.</p>
+        <p>10.2 Bazario may suspend or terminate accounts for violations of these GTC, including non-payment, fraudulent activity, or misuse of the Platform.</p>
+
+        <h2>11. Data Protection</h2>
+        <p>11.1 Bazario collects and processes personal data in accordance with our Privacy Policy (see <a href="dataprivacy.html">Data Privacy</a>). By using the Platform, you consent to this processing.</p>
+
+        <h2>12. Amendments to the GTC</h2>
+        <p>12.1 Bazario reserves the right to amend these GTC at any time. Changes will be communicated to users via email or on the Platform and take effect upon publication unless otherwise stated.</p>
+
+        <h2>13. Governing Law and Jurisdiction</h2>
+        <p>13.1 These GTC are governed by Swiss law. Any disputes arising from or in connection with these GTC shall be subject to the exclusive jurisdiction of the courts in Zurich, Switzerland.</p>
+
+        <h2>14. Contact</h2>
+        <p>14.1 For questions or concerns regarding these GTC, please contact us at:</p>
+        <p>Bazario GmbH<br>Engehaldenstrasse 26<br>CH-3004 Bern<br>Email: <a href="mailto:info@bazario.com">info@bazario.com</a><br>Phone: 087 369 71 69</p>
+
+        <p>Last updated: March 26, 2025</p>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <hr>
+    <div id='footerContainer'>
+        <div>
+            <h3 class='titleName'>BAZARIO</h3>
+        </div>
+        <div class='footer-boxes'>
+            <h4>Payment Methods</h4>
+            <div class='payment-method'>
+                <img src='images/mastercard.svg' alt='Mastercard'>
+                <img src='images/postfinance-pay.svg' alt='Postfinance'>
+                <img src='images/apple-pay.svg' alt='Apple Pay'>
+                <img src='images/visa.svg' alt='Visa'>
+            </div>
+        </div>
+        <div class='footer-boxes'>
+            <h4>Terms & Conditions</h4>
+            <a href="impressum.html" class="Information">Impressum</a>
+            <a href="agb.html" class="Information">AGB</a>
+            <a href="dataprivacy.html" class="Information">Data Privacy</a>
+        </div>
+        <div class='footer-boxes'>
+            <h4>Contact</h4>
+            <p>info@bazario.com</p>
+            <p>087 369 71 69</p>
+            <p>Engehaldenstrasse 26</p>
+        </div>
+        <div>
+            <img src='https://maps.googleapis.com/maps/api/staticmap?center=Engehaldenstrasse+26&zoom=16&size=150x100&key=AIzaSyDF62POkFMZpB3r1QWkywCeoqHoPlUsxy4'
+                 alt='Map'>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

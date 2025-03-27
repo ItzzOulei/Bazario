@@ -1,0 +1,16 @@
+ /* Color Platte */
+
+
+
+/* How to use:       color: var(--dark-violett);*/
+
+:root {
+
+    --Title: #FFFFFF;
+    --Subtitle: #943D73;
+    --Normal: #FFFFFF;
+
+    --Background: #1E1E1E;
+    --Border: #a4a4a4;
+    --Icons: #B1B1B1
+}

@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+    background-color: #1E1E1E;
+    text-align: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    width: 100%;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.container {
+    margin-top: 90px; /* Push content below the 90px fixed navbar + extra spacing */
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hr {
+    max-width: 900px;
+    color: #943D73;
+    border-color: #943D73;
+    margin: 10px auto 10px auto;
+}
+
+.title_site {
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+}
+
+.review_title {
+    font-size: 25px;
+    margin: 40px 0 20px 0;
+}
+
+.detail {
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    gap: 10px;
+    border-top: solid 2px #943D73;
+    max-width: 900px;
+    padding-top: 40px;
+}
+
+.detail .content {
+    margin: 0 10px;
+    max-width: 450px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
+    position: relative; /* Für das Wunschlisten-Symbol */
+}
+
+.detail .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 10px rgba(148,61,115,0.35);
+    box-shadow: 0px 0px 15px 10px rgba(148,61,115,0.35);
+    position: relative; /* Für das Wunschlisten-Symbol */
+}
+
+.detail .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 400px;
+    border: 3px solid #943D73; /* Border direkt hier definiert */
+    transition: transform 0.3s ease-in, border-color 0.3s ease-in; /* Sanfter Übergang für Zoom und Border */
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.detail .image img:hover {
+    transform: scale(1.075);
+    border-color: #1E1E1E;
+}
+
+.detail .title {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    font-size: xxx-large;
+}
+
+.detail .price {
+    font-weight: bolder;
+    font-size: large;
+    letter-spacing: 2px;
+    margin: 0 0 20px 0;
+    color: #943D73;
+}
+
+.detail .button {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.detail .button button.add-to-cart {
+    background-color: #CD519D;
+    border: none;
+    padding: 10px 80px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin: 0;
+}
+
+.detail .button button.add-to-cart:hover {
+    background-color: #943D73;
+    cursor: pointer;
+}
+
+.detail .button .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#counter-value p {
+    margin: 0;
+}
+
+.detail .button .counter-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#decrement {
+    background-color: #CD519D;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+}
+
+#increment {
+    background-color: #CD519D;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+}
+
+#increment:hover, #decrement:hover {
+    background-color: #943D73;
+    transition: background-color 0.2s;
+}
+
+.quantity-controls {
+    background-color: #CD519D;
+    border-radius: 5px;
+}
+
+#counter-value {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    min-width: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.detail .button svg {
+    width: 30px;
+}
+
+.detail .button span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.detail .stock {
+    margin: 20px 0 0 0;
+    font-weight: lighter;
+    font-size: medium;
+    color: #CD519D;
+}
+
+.detail .description {
+    font-weight: lighter;
+    font-size: medium;
+    margin: 10px 0;
+}
+
+.detail .infos-publisher {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.detail .publisher-name {
+    font-weight: lighter;
+    font-size: small;
+    margin: 10px 0;
+}
+
+.detail .creation-date {
+    font-weight: lighter;
+    font-size: small;
+    color: #943D73;
+    margin: 10px 0;
+}
+
+.detail .publisher-profile:hover {
+    cursor: pointer;
+}
+
+.publisher-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #CD519D;
+}
+
+#profileCategories {
+    max-width: 880px;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    margin: 10px auto 10px auto;
+}
+
+#profileCategories p {
+    margin: 0 20px 0px 0px;
+    color: #9a9a9a;
+}
+
+#profileCategories p:hover {
+    cursor: pointer;
+    color: #943D73;
+}
+
+#profileCategories .clicked {
+    color: white;
+}
+
+.product-display {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.review-card {
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    border: 1px solid #943D73;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(148,61,115,0.2);
+    box-shadow: 0px 0px 10px 5px rgba(148,61,115,0.2);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #CD519D;
+}
+
+.review-username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.review-rating {
+    display: flex;
+    gap: 5px;
+}
+
+.filled-star {
+    color: #FFD700; /* Gold color for filled stars */
+}
+
+.empty-star {
+    color: #9a9a9a; /* Gray color for empty stars */
+}
+
+.review-body {
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.review-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #CD519D;
+    margin-top: 10px;
+}
+
+.review-footer {
+    text-align: right;
+}
+
+.review-date {
+    font-size: 14px;
+    color: #943D73;
+}
+
+#addReviewForm {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CD519D;
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.form-group select:focus,
+.form-group textarea:focus,
+.form-group input[type="file"]:focus {
+    outline: none;
+    border-color: #943D73;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-review-btn {
+    background-color: #CD519D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-review-btn:hover {
+    background-color: #943D73;
+}
+
+.response-message {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.response-message.success {
+    color: #00FF00;
+}
+
+.response-message.error {
+    color: #FF0000;
+}
+
+.wishlist {
+    position: absolute;
+    bottom: 35px; /* Abstand vom unteren Rand */
+    right: 10px; /* Abstand vom rechten Rand */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.wishlist svg {
+    width: 24px;
+    height: 24px;
+    color: #CD519D;
+    transition: color 0.3s ease;
+}
+
+.wishlist:hover svg {
+    color: #943D73;
+}
+.review-username:hover {
+    color: #943D73;
+    cursor: pointer;
+}

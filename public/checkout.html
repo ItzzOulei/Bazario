@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bazario | Checkout</title>
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="javascript/checkout.js" defer></script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-left">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <h1>Bazario</h1>
+      </a>
+    </div>
+    <div>
+      <div class="vertical-line"></div>
+    </div>
+    <ul id="hideNav" class="nav-main-menu">
+      <li class="dropdown">
+        <a href="/products.html" class="nav-link"><span>Entertainment</span> <i class="fa fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="/products.html?categoryId=2">Books</a></li>
+          <li><a href="/products.html?categoryId=6">Toys</a></li>
+          <li><a href="/products.html?categoryId=9">Movie</a></li>
+        </ul>
+      </li>
+      <li><a href="/products.html?categoryId=1" class="nav-link">Electronics</a></li>
+      <li><a href="/products.html?categoryId=3" class="nav-link">Clothing</a></li>
+      <li class="dropdown">
+        <a href="/products.html" class="nav-link"><span>Food & Beverage</span> <i class="fa fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="/products.html?categoryId=8">Food</a></li>
+          <li><a href="/products.html?categoryId=10">Drinks</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="contentWrapper">
+    <div class="checkout-container">
+      <div class="checkout-articles">
+        <h2>Your Cart</h2>
+        <div class="cart-items"></div>
+      </div>
+      <div class="checkout-information">
+        <div class="summary">
+          <div class="align-price">
+          <p>Subtotal: </p><p id="subtotal">0.00 CHF</p>
+          </div>
+          <div class="align-price">
+          <p>Discount: </p><p id="discount">0.00 CHF</p>
+          </div>
+          <hr>
+          <div class="align-price">
+          <p class="total">Total: </p><p id="total">0.00 CHF</p>
+        </div>
+        </div>
+        <div class="coupon-section">
+          <label for="coupon-code">Coupon Code:</label>
+          <input type="text" id="coupon-code" placeholder="Enter coupon code">
+          <button id="apply-coupon">Apply</button>
+        </div>
+        <button id="confirm-checkout">Confirm Purchase</button>
+        <p id="checkout-message"></p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+<footer>
+  <hr>
+  <div id="footerContainer">
+    <div>
+      <h3 class="titleName">BAZARIO</h3>
+    </div>
+    <div class="footer-boxes">
+      <h4>Payment Methods</h4>
+      <div class="payment-method">
+        <img src="images/mastercard.svg" alt="Mastercard">
+        <img src="images/postfinance-pay.svg" alt="Postfinance">
+        <img src="images/apple-pay.svg" alt="Apple Pay">
+        <img src="images/visa.svg" alt="Visa">
+      </div>
+    </div>
+    <div class="footer-boxes">
+      <h4>Terms & Conditions</h4>
+      <p>Impressum</p>
+      <p>AGB</p>
+      <p>Data Privacy</p>
+    </div>
+    <div class="footer-boxes">
+      <h4>Contact</h4>
+      <p>info@bazario.com</p>
+      <p>087 369 71 69</p>
+      <p>Engehaldenstrasse 26</p>
+    </div>
+    <div>
+      <img src="https://maps.googleapis.com/maps/api/staticmap?center=Engehaldenstrasse+26&zoom=16&size=150x100&key=AIzaSyDF62POkFMZpB3r1QWkywCeoqHoPlUsxy4" alt="Map">
+    </div>
+  </div>
+</footer>
+</html>
